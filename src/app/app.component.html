@@ -1,0 +1,51 @@
+<div class="card">
+  <h5 class="card-header">Angular ngx-translate</h5>
+  <div class="card-body">
+    <h5 class="card-title">
+      <div class="form-group">
+        <label> {{ "HOME.SELECT" | translate }}</label>
+        <select
+          class="form-control"
+          #langselect
+          (change)="translate.use(langselect.value)"
+        >
+          <option *ngFor="let lang of translate.getLangs()" [value]="lang">{{
+            lang
+          }}</option>
+        </select>
+      </div>
+    </h5>
+  </div>
+
+  <div class="card">
+    <div class="card-body">{{ "HOME.TEXT_1" | translate }}</div>
+    <div class="card-body">{{ "HOME.TEXT_2" | translate }}</div>
+  </div>
+
+  <!--  -->
+
+  <!-- The content below is only a placeholder and can be replaced.
+<div style="text-align: center;">
+  <div class="dropdown">
+    <button
+      class="btn btn-secondary dropdown-toggle"
+      type="button"
+      id="dropdownMenu2"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      Dropdown
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+      <button class="dropdown-item" type="button">Action</button>
+      <button class="dropdown-item" type="button">Another action</button>
+      <button class="dropdown-item" type="button">Something else here</button>
+    </div>
+  </div>
+  <h1 i18n>Localization Demo in Angular using i18n</h1>
+  <h3 i18n="@@myName">Hello, My name is Amrutha</h3>
+  <p>This text will remain same in all languages</p>
+  <hr />
+</div> -->
+</div>
